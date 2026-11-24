@@ -6,29 +6,31 @@
 <title>MovilizarMe - Dream Global &lt;&gt; Impact Local</title>
 <meta name="description" content="MovilizarMe: ayudando a las personas a encontrar su camino de regreso a Dios. Helping people find their way back to God.">
 <link rel="icon" type="image/png" href="assets/MovilizarMe-favicon.png">
+<link rel="alternate" hreflang="es" href="es/">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<script>
+(function () {
+  var saved = null;
+  try { saved = localStorage.getItem("mm-lang"); } catch (e) {}
+  var nav = (navigator.language || "es").toLowerCase();
+  var lang = saved || (nav.indexOf("en") === 0 ? "en" : "es");
+  location.replace(lang + "/");
+})();
+</script>
+<meta http-equiv="refresh" content="0; url=es/">
 </head>
 <body>
-<main class="lang-home">
+<main class="root-fallback">
   <div class="wrap center">
     <img class="brand-hero" src="assets/logo.png" alt="MovilizarMe, Dream Global, Impact Local">
     <p class="slogan">Ayudando a las personas a encontrar su camino de regreso a Dios.</p>
     <p class="slogan">Helping people find their way back to God.</p>
-    <p>Elige tu idioma / Choose your language</p>
-    <div class="lang-choices">
-      <a class="btn" href="es/index.html" hreflang="es">Español</a>
-      <a class="btn sec" href="en/index.html" hreflang="en">English</a>
-    </div>
-    <p class="note">Formamos plantadores, plantamos iglesias y movilizamos a la iglesia.<br>
-    We train church planters, plant churches, and mobilize the church.</p>
+    <p><a href="es/">Español</a> · <a href="en/">English</a></p>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="wrap footer-in center">
-    <p class="small">© 2026 MovilizarMe</p>
-    <p class="small">Sitio seguro: conexión cifrada (HTTPS). Dominio verificado con Google. / Secure site: encrypted connection (HTTPS). Domain verified with Google.</p>
-    <p class="small"><a href="es/privacidad/index.html">Aviso de privacidad</a> · <a href="en/privacy/index.html">Privacy Notice</a></p>
-  </div>
-</footer>
 </body>
 </html>
