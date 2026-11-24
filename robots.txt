@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://movilizar.me/sitemap.xml
