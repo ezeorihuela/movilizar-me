@@ -1,0 +1,63 @@
+/* MovilizarMe Interpreter - pantallas del servicio (intérprete, proyector, oyente) */
+:root{
+  --morado:#453a63; --morado-oscuro:#342b4d; --morado-suave:#f4f1f8;
+  --verde:#17615f; --texto:#453e57; --suave:#555064; --borde:#ddd6ea;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:"Open Sans",system-ui,Arial,sans-serif; color:var(--texto);
+  background:#fff; line-height:1.55;
+}
+.wrap{max-width:44rem;margin:0 auto;padding:1.4rem 1.1rem 3rem}
+h1{font-family:"Fira Sans","Open Sans",sans-serif;color:var(--morado-oscuro);line-height:1.15;margin:.4rem 0 .8rem}
+h2{font-family:"Fira Sans","Open Sans",sans-serif;color:var(--morado-oscuro)}
+.brand{font-weight:700;color:var(--morado);letter-spacing:.02em}
+.btn{
+  display:inline-block;background:var(--verde);color:#fff;border:0;cursor:pointer;
+  font-weight:700;font-size:1.1rem;padding:.8rem 1.9rem;border-radius:.25rem;margin:.3rem .4rem .3rem 0;
+}
+.btn:hover{background:#0f4a48}
+.btn.sec{background:transparent;color:var(--morado);box-shadow:inset 0 0 0 .13rem var(--morado)}
+.btn.sec:hover{background:var(--morado-suave)}
+.btn[disabled]{opacity:.5;cursor:wait}
+input[type=text]{
+  font-size:1.5rem;letter-spacing:.25em;text-transform:uppercase;text-align:center;
+  padding:.7rem .5rem;border:.13rem solid var(--borde);border-radius:.4rem;width:100%;max-width:20rem;
+}
+select{font-size:1rem;padding:.55rem;border:.13rem solid var(--borde);border-radius:.4rem;max-width:100%}
+.status{font-size:1.05rem;margin:1rem 0;color:var(--suave)}
+.status strong{color:var(--verde)}
+.error{color:#a11;font-weight:600}
+.panel{background:var(--morado-suave);border-radius:.625rem;padding:1.2rem 1.3rem;margin:1.2rem 0}
+.code{
+  font-family:"Fira Sans",sans-serif;font-size:3rem;font-weight:800;letter-spacing:.18em;
+  color:var(--morado-oscuro);text-align:center;margin:.4rem 0;
+}
+.center{text-align:center}
+.big-listen{font-size:1.5rem;padding:1.1rem 2.6rem;width:100%;max-width:24rem}
+.pulse{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;background:#c33;margin-right:.45rem;vertical-align:middle}
+.pulse.on{background:#1a9e54}
+/* Proyector: identidad propia de MovilizarMe (logo, lema y layout editorial en dos columnas) */
+.projector{background:var(--morado-oscuro);color:#fff;min-height:100vh;display:flex;flex-direction:column;padding:2.2rem clamp(1.2rem,5vw,4rem) 1.4rem}
+.proj-head{text-align:center;border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:1.2rem}
+.proj-logo{width:min(19rem,62vw);height:auto}
+.proj-slogan{font-style:italic;color:#e6ddf5;font-size:clamp(.95rem,2vw,1.2rem);margin:.7rem 0 0}
+.proj-slogan span{font-size:.85em;color:#bdb4d4}
+.proj-grid{flex:1;display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;max-width:75rem;margin:0 auto;width:100%;padding:1.6rem 0}
+@media (min-width:56rem){.proj-grid{grid-template-columns:1.05fr .95fr}}
+.proj-info{text-align:center}
+@media (min-width:56rem){.proj-info{text-align:left}}
+.projector h1{color:#fff;font-size:clamp(2rem,4.6vw,3.2rem);margin-top:0}
+.proj-info p{font-size:clamp(1.05rem,2.2vw,1.4rem);color:#e6ddf5}
+.proj-info p span{color:#bdb4d4;font-size:.88em}
+.code-label{letter-spacing:.22em;text-transform:uppercase;font-size:.85rem !important;color:#9fd1d1 !important;margin-bottom:.3rem}
+.code-pill{
+  display:inline-block;font-family:"Fira Sans",sans-serif;font-weight:800;
+  font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:.22em;color:#fff;
+  border:.16rem solid var(--verde);border-radius:999px;padding:.35em .7em .3em .9em;margin:.2rem 0 .8rem;
+  background:rgba(23,97,95,.25);
+}
+.proj-qr{text-align:center}
+.projector .qr{background:#fff;border:.35rem solid var(--verde);border-radius:1rem;padding:1.1rem;display:inline-block;line-height:0;margin:0}
+.projector .qr svg{width:min(44vh,70vw);height:auto}
+.proj-foot{text-align:center;color:#a79fc0;font-size:.9rem;border-top:1px solid rgba(255,255,255,.22);padding-top:1rem}
