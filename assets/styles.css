@@ -192,3 +192,16 @@ figure.band img{
 
 .header-cta{padding:.5rem 1.4rem;font-size:.95rem;margin:0}
 .firma{font-weight:700;color:var(--morado);margin-top:1rem}
+
+/* Pie de confianza con popups (estilo Lino's) */
+.trust-btn{
+  background:none;border:0;padding:0;font:inherit;cursor:pointer;
+  color:#cfe8e8;text-decoration:underline;text-underline-offset:.15em;
+}
+.trust-btn:hover{color:#fff}
+.trust-dlg{
+  border:0;border-radius:.625rem;padding:1.6rem 1.7rem;
+  max-width:min(26rem,92vw);color:var(--texto);background:#fff;
+}
+.trust-dlg::backdrop{background:rgba(23,18,38,.55)}
+.trust-dlg h3{margin-top:0}

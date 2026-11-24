@@ -80,10 +80,23 @@
     <img src="../../assets/logo-white.png" alt="MovilizarMe, Dream Global, Impact Local">
     <p class="slogan">Helping people find their way back to God.</p>
     <p class="small">© 2026 MovilizarMe. All rights reserved.</p>
-    <p class="small">Secure site: encrypted connection (HTTPS). Domain verified with Google.</p>
+    <p class="small trust-line">🔒 <button type="button" class="trust-btn" data-dlg="dlg-https">Secure site (HTTPS)</button> · <button type="button" class="trust-btn" data-dlg="dlg-google">Verified by Google Safe Browsing</button></p>
     <p class="small"><a href="../../en/privacy/index.html">Privacy Notice</a> · <a href="../../en/contact/index.html">Contact</a></p>
   </div>
 </footer>
+
+<dialog class="trust-dlg" id="dlg-https" aria-labelledby="dlg-https-t">
+  <h3 id="dlg-https-t">Secure site (HTTPS)</h3>
+  <p>Your connection to movilizar.me is encrypted. The certificate is issued by Let's Encrypt through GitHub Pages, and your browser checks it on every visit: that is why it shows the padlock.</p>
+  <p><a class="btn" href="https://www.ssllabs.com/ssltest/analyze.html?d=movilizar.me" target="_blank" rel="noopener">See the live report</a></p>
+  <button type="button" class="btn sec dlg-close">Close</button>
+</dialog>
+<dialog class="trust-dlg" id="dlg-google" aria-labelledby="dlg-google-t">
+  <h3 id="dlg-google-t">Verified by Google Safe Browsing</h3>
+  <p>Google checks this site for dangerous content, harmful downloads, and phishing. Its public report shows the current status of movilizar.me.</p>
+  <p><a class="btn" href="https://transparencyreport.google.com/safe-browsing/search?url=movilizar.me" target="_blank" rel="noopener">See Google's report</a></p>
+  <button type="button" class="btn sec dlg-close">Close</button>
+</dialog>
 <script src="../../assets/lang.js" defer></script>
 </body>
 </html>

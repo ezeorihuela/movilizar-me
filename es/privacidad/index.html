@@ -70,10 +70,23 @@
     <img src="../../assets/logo-white.png" alt="MovilizarMe, Dream Global, Impact Local">
     <p class="slogan">Ayudando a las personas a encontrar su camino de regreso a Dios.</p>
     <p class="small">© 2026 MovilizarMe. Todos los derechos reservados.</p>
-    <p class="small">Sitio seguro: conexión cifrada (HTTPS). Dominio verificado con Google.</p>
+    <p class="small trust-line">🔒 <button type="button" class="trust-btn" data-dlg="dlg-https">Sitio seguro (HTTPS)</button> · <button type="button" class="trust-btn" data-dlg="dlg-google">Verificado por Google Safe Browsing</button></p>
     <p class="small"><a href="../../es/privacidad/index.html">Aviso de privacidad</a> · <a href="../../es/contacto/index.html">Contacto</a></p>
   </div>
 </footer>
+
+<dialog class="trust-dlg" id="dlg-https" aria-labelledby="dlg-https-t">
+  <h3 id="dlg-https-t">Sitio seguro (HTTPS)</h3>
+  <p>Tu conexión con movilizar.me viaja cifrada. El certificado lo emite Let's Encrypt a través de GitHub Pages y tu navegador lo comprueba en cada visita: por eso muestra el candado.</p>
+  <p><a class="btn" href="https://www.ssllabs.com/ssltest/analyze.html?d=movilizar.me" target="_blank" rel="noopener">Ver el reporte en vivo</a></p>
+  <button type="button" class="btn sec dlg-close">Cerrar</button>
+</dialog>
+<dialog class="trust-dlg" id="dlg-google" aria-labelledby="dlg-google-t">
+  <h3 id="dlg-google-t">Verificado por Google Safe Browsing</h3>
+  <p>Google revisa este sitio en busca de contenido peligroso, descargas dañinas y suplantación de identidad. Su reporte público muestra el estado actual de movilizar.me.</p>
+  <p><a class="btn" href="https://transparencyreport.google.com/safe-browsing/search?url=movilizar.me" target="_blank" rel="noopener">Ver el reporte de Google</a></p>
+  <button type="button" class="btn sec dlg-close">Cerrar</button>
+</dialog>
 <script src="../../assets/lang.js" defer></script>
 </body>
 </html>
