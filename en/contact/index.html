@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact - MovilizarMe</title>
-<meta name="description" content="Let us talk: book a meeting with Ezequiel Gonzalez or support the family through Mesa Global.">
+<meta name="description" content="Let us talk: write to us by email or book an important meeting with Ezequiel Gonzalez.">
 <link rel="icon" type="image/png" href="../../assets/MovilizarMe-favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/styles.css">
@@ -24,11 +24,44 @@
 <div class="page-hero"><div class="wrap">
   <p class="eyebrow">Contact</p>
   <h1>Let us talk</h1>
-  <p class="lead">The fastest way to talk with Ezequiel is to book a meeting. Pick a day and time, and we will meet over Google Meet.</p>
-  <p><a class="btn" href="../../en/meeting/index.html">Book a meeting</a></p>
-  <p class="small">Meetings are scheduled securely in Google Calendar and sign-ups are received through Google Forms. See the <a href="../../en/privacy/index.html">Privacy notice</a>.</p>
+  <p class="lead">Write to us with this form: it opens your own email, already addressed to us. No sign-ups, no accounts.</p>
 </div></div>
 <section class="tight"><div class="wrap">
+  <form class="cform" id="cform">
+    <div class="cform-grid">
+      <label>Your name<input type="text" id="cf-nombre" autocomplete="name"></label>
+      <label>Your email<input type="email" id="cf-correo" autocomplete="email"></label>
+    </div>
+    <label>Subject
+      <select id="cf-asunto">
+        <option>CESI training</option>
+        <option>Church planting</option>
+        <option>González on Mission</option>
+        <option>Prayer request</option>
+        <option>Library</option>
+        <option>Live interpretation</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Your message<textarea id="cf-mensaje" rows="6"></textarea></label>
+    <p><button class="btn" type="submit">Send by email</button></p>
+    <p class="small">The form opens your email app with the message addressed to ezequiel@movilizar.me. Nothing is stored on this site. If you prefer, write to us directly at <a href="mailto:ezequiel@movilizar.me">ezequiel@movilizar.me</a>.</p>
+  </form>
+</div></section>
+<section class="band"><div class="wrap">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Only the important things</p>
+      <h2>Does it need a live conversation?</h2>
+      <p>The schedule is for what truly requires a conversation with a date and time: a training decision, planting accompaniment, or a project with your church.</p>
+    </div>
+    <div>
+      <p><a class="btn" href="../../en/meeting/index.html">Book a meeting</a></p>
+      <p class="small">Meetings are scheduled securely in Google Calendar. See the <a href="../../en/privacy/index.html">Privacy notice</a>.</p>
+    </div>
+  </div>
+</div></section>
+<section><div class="wrap">
   <h2>You can also</h2>
   <ul class="cards" style="margin-top:0">
     <li class="card"><h3>Support the family</h3><p>Meet and support the family on Mesa Global: González on Mission.</p><a href="https://www.mesaglobal.co/workers/31682" target="_blank" rel="noopener">Go to Mesa Global</a></li>
@@ -36,6 +69,20 @@
     <li class="card"><h3>Request a title</h3><p>We will look for the book you need in the Library catalog.</p><a href="../../en/library/index.html">Library</a></li>
   </ul>
 </div></section>
+<script>
+document.getElementById('cform').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var asunto = document.getElementById('cf-asunto').value;
+  var nombre = document.getElementById('cf-nombre').value.trim();
+  var correo = document.getElementById('cf-correo').value.trim();
+  var mensaje = document.getElementById('cf-mensaje').value.trim();
+  var cuerpo = mensaje + "
+
+Name: " + nombre + "
+Email: " + correo;
+  location.href = 'mailto:ezequiel@movilizar.me?subject=' + encodeURIComponent('Website contact: ' + asunto) + '&body=' + encodeURIComponent(cuerpo);
+});
+</script>
 
 </main>
 <footer class="site-footer">
