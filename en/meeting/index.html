@@ -56,11 +56,11 @@ gtag('config', 'G-DK69PTG0WY');
 </div></div>
 <section class="tight"><div class="wrap">
   <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1BRnoA_opXTU4zdIGPiNtI2tsKorIZaUFhQNEMRxJc78_NpgNGewqwUwONBLJ77OwdPz37H9Dw?gv=true" class="cal-embed" title="MovilizarMe meeting schedule" loading="lazy"></iframe>
-  <div class="book-card">
-    <h2 style="margin:.2rem 0">Book on a full screen</h2>
-    <p>On a phone, Google's schedule works best full screen. Tap the button, pick a day and time, and we will meet over Google Meet.</p>
-    <p style="margin-bottom:.2rem"><a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1BRnoA_opXTU4zdIGPiNtI2tsKorIZaUFhQNEMRxJc78_NpgNGewqwUwONBLJ77OwdPz37H9Dw?gv=true" target="_blank" rel="noopener">Open the schedule</a></p>
+  <div class="book-card" id="book-card" style="display:none;border:1px solid var(--borde);border-radius:.75rem;background:#fff;padding:1.8rem 1.3rem;text-align:center">
+    <p style="margin:.2rem 0 1.2rem">Save your spot: pick a day and time on the schedule.</p>
+    <p style="margin:0"><a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1BRnoA_opXTU4zdIGPiNtI2tsKorIZaUFhQNEMRxJc78_NpgNGewqwUwONBLJ77OwdPz37H9Dw?gv=true">Book a meeting</a></p>
   </div>
+  <script>(function(){var m=window.matchMedia('(max-width:700px)').matches;var f=document.querySelector('.cal-embed');var c=document.getElementById('book-card');if(m){if(f)f.remove();if(c)c.style.display='block';}else if(c){c.remove();}})();</script>
 </div></section>
 
 </main>
