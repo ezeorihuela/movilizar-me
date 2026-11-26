@@ -166,7 +166,9 @@ section.tight{padding:3rem 0}
 /* ---------- Formulario ---------- */
 .form-embed{width:100%;height:1450px;border:1px solid var(--borde);border-radius:.75rem;background:#fff}
 .cal-embed{width:100%;height:820px;border:1px solid var(--borde);border-radius:.75rem;background:#fff}
-@media (max-width:700px){.form-embed{height:1750px}.cal-embed{height:1950px}}
+.book-card{display:none;border:1px solid var(--borde);border-radius:.75rem;background:#fff;padding:1.6rem 1.3rem;text-align:center}
+.book-card p{margin:.4rem 0 1.1rem}
+@media (max-width:700px){.form-embed{height:1750px}.cal-embed{display:none}.book-card{display:block}}
 .form-link{font-family:"Poppins",sans-serif;font-size:.95rem;font-weight:600}
 
 /* ---------- Responsive ---------- */
